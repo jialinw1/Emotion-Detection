@@ -1,5 +1,7 @@
 # Emotion Detection Project
 
+![Emotion Detection.png](Emotion%20Detection.png)
+
 ## Prerequisites
 
 The following packages need to be installed:

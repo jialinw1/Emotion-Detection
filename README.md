@@ -30,8 +30,6 @@ Input Layer
 |-- Dropout (0.5)
 |-- Dense Layer (number of classes) -> Softmax
 
-
-
 <br>
 Using *'fer2013'* as emotion and *'utkface-new'* as age image set train two different model which these image set can be found in kaggle.
 <br>

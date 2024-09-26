@@ -74,5 +74,5 @@ Two datasets are used in this project:
 ---
 
 #### Note
-
+Image Datasets are all downloaded from Kaggle.
 This project is used for practice and achieves an accuracy of approximately **50%** due to the choice of image datasets.

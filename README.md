@@ -1,40 +1,76 @@
-# Emotion-Detection
-The necessary packages need to be installed:<br>
+# Emotion Detection Project
 
-    1. pip install tensorflow
-    2. pip install opencv-python
-    3. pip install numpy
-    4. pip install Pillow
-    5. pip install matplotlib
-    6. pip install scikit-learn
+## Prerequisites
 
-<br>
-** Deeper CNN Model **
-Input Layer
-|
-|-- Conv2D Layer (64 filters, 3x3 kernel) -> ReLU
-|-- Conv2D Layer (64 filters, 3x3 kernel) -> ReLU
-|-- MaxPooling2D (2x2 pool size)
-|
-|-- Conv2D Layer (128 filters, 3x3 kernel) -> ReLU
-|-- Conv2D Layer (128 filters, 3x3 kernel) -> ReLU
-|-- MaxPooling2D (2x2 pool size)
-|
-|-- Conv2D Layer (256 filters, 3x3 kernel) -> ReLU
-|-- Conv2D Layer (256 filters, 3x3 kernel) -> ReLU
-|-- MaxPooling2D (2x2 pool size)
-|
-|-- Flatten (convert 2D feature maps into 1D vector)
-|
-|-- Dense Layer (512 units) -> ReLU
-|-- Dropout (0.5)
-|-- Dense Layer (number of classes) -> Softmax
+The following packages need to be installed:
 
-<br>
-Using *'fer2013'* as emotion and *'utkface-new'* as age image set train two different model which these image set can be found in kaggle.
-<br>
-Run AutoSepUTK.py split the train file and test file.
-<br>
-Run TrainModel.py train as two separate models.
-<br>
-This project is used for practice and has an accuary of 50% due to the selection of picture data sets.
+```bash
+pip install tensorflow
+pip install opencv-python
+pip install numpy
+pip install Pillow
+pip install matplotlib
+pip install scikit-learn
+```
+
+## Deeper CNN Model 
+
+---
+
+#### Layer 1: Convolutional Block
+
+- **Conv2D Layer**: 64 filters, 3x3 kernel -> ReLU
+- **Conv2D Layer**: 64 filters, 3x3 kernel -> ReLU
+- **MaxPooling2D**: 2x2 pool size
+
+---
+
+#### Layer 2: Convolutional Block
+
+- **Conv2D Layer**: 128 filters, 3x3 kernel -> ReLU
+- **Conv2D Layer**: 128 filters, 3x3 kernel -> ReLU
+- **MaxPooling2D**: 2x2 pool size
+
+---
+
+#### Layer 3: Convolutional Block
+
+- **Conv2D Layer**: 256 filters, 3x3 kernel -> ReLU
+- **Conv2D Layer**: 256 filters, 3x3 kernel -> ReLU
+- **MaxPooling2D**: 2x2 pool size
+
+---
+
+#### Fully Connected Layer
+
+- **Flatten**: Converts 2D feature maps into a 1D vector
+
+---
+
+#### Dense Layers
+
+- **Dense Layer**: 512 units -> ReLU
+- **Dropout**: 0.5 (50% of neurons randomly dropped)
+- **Dense Layer**: (Number of classes) -> Softmax
+
+
+## Image Datasets
+
+Two datasets are used in this project:
+
+1. **FER2013** for emotion detection.
+2. **UTKFace** for age detection.
+
+## Training Data
+
+1. **Splitting the Dataset**:  
+   - Run `AutoSepUTK.py` to split the UTKFace dataset into training and test sets.
+
+2. **Training the Models**:  
+   - Run `TrainModel.py` to train two separate models: one for emotion detection and one for age detection.
+
+---
+
+#### Note
+
+This project is used for practice and achieves an accuracy of approximately **50%** due to the choice of image datasets.
